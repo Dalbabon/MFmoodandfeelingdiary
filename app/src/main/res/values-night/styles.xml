@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Widget.Theme.MFMoodAndFeelingDiary.MyView" parent="">
+        <item name="android:background">@color/gray_600</item>
+        <item name="exampleColor">@color/light_blue_600</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+</resources>

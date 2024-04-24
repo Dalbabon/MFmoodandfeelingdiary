@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBECFA"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/rectangleTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="468dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/main_acticity_rectangle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleTop"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleTop"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/rectangleTop"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="175dp"
+            android:layout_height="75dp"
+            android:alpha="0.000001"
+            android:onClick="onClickToCalendar"
+            android:text="Button"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="136dp"
+            android:layout_height="75dp"
+            android:alpha="0.000001"
+            android:onClick="onClickToNavi"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="320dp"
+            android:layout_marginBottom="132dp"
+            android:clickable="true"
+            android:onClick="onClickToNavi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu_button" />
+
+        <ImageView
+            android:id="@+id/calendarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="272dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="123dp"
+            android:clickable="true"
+            android:onClick="onClickToCalendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/menuButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/callendar_ico" />
+
+        <TextView
+            android:id="@+id/textViewMounth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="206dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="127dp"
+            android:clickable="true"
+            android:fontFamily="sans-serif"
+            android:onClick="onClickToCalendar"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#2A2D44"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/calendarButton"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toEndOf="@+id/menuButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Ноябрь" />
+
+        <TextView
+            android:id="@+id/textViewThisDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="300dp"
+            android:alpha="0.6"
+            android:text="Чт"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewNextDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:text="Чт"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewThisDay"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewThirdDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:text="Ср"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewNextDay"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewFourDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:text="Чт"
+            android:textAlignment="center"
+            android:textColor="#2C88BA"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewThirdDay"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewFiveDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:text="Пт"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewFourDay"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewSixDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:text="Суб"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewFiveDay"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewSevenDay"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.6"
+            android:text="Вс"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewSixDay"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:text="Чт" />
+
+        <TextView
+            android:id="@+id/textViewThisDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewThisDay" />
+
+        <TextView
+            android:id="@+id/textViewNextDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewThisDayDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNextDay" />
+
+        <TextView
+            android:id="@+id/textViewThirdDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewNextDayDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewThirdDay" />
+
+        <TextView
+            android:id="@+id/textViewFourDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2C88BA"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewThirdDayDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFourDay" />
+
+        <TextView
+            android:id="@+id/textViewFiveDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewFourDayDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFiveDay" />
+
+        <TextView
+            android:id="@+id/textViewSixDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewFiveDayDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSixDay" />
+
+        <TextView
+            android:id="@+id/textViewSevenDayDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="22"
+            android:textAlignment="center"
+            android:textColor="#2A2D44"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewSixDayDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSevenDay" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/rectangleButom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/main_activity_butom_rectangle" />
+
+    <ImageView
+        android:id="@+id/ellipseMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="181dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_activity_ellipse" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipseMain"
+        app:layout_constraintEnd_toEndOf="@+id/ellipseMain"
+        app:layout_constraintStart_toStartOf="@+id/ellipseMain"
+        app:layout_constraintTop_toTopOf="@+id/ellipseMain">
+
+        <ImageView
+            android:id="@+id/imageViewLogoSmile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="69dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="92dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/crazy__traced_big_logo" />
+
+        <ImageView
+            android:id="@+id/moodButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogoSmile"
+            app:srcCompat="@drawable/main_elipce_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleButom"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleButom"
+        app:layout_constraintStart_toStartOf="@+id/rectangleButom"
+        app:layout_constraintTop_toTopOf="@+id/rectangleButom">
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/crazy_em" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:srcCompat="@drawable/very_happy_em" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView16"
+            app:srcCompat="@drawable/happy_em" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:srcCompat="@drawable/drunk_em" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:srcCompat="@drawable/sad_em" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="26dp"
+            android:clickable="true"
+            android:onClick="onClickToDiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:srcCompat="@drawable/crying_em" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
